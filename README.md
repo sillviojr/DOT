@@ -1,4 +1,4 @@
-# E-Commerce Móveis & Pisos
+# E-Commerce ●DOT
 
 Bem-vindo ao E-Commerce Móveis & Pisos, um projeto inovador que simplifica a compra de móveis e pisos, oferecendo uma funcionalidade exclusiva de cálculo automático de cerâmicas para o seu espaço.
 
@@ -45,4 +45,4 @@ Este projeto está sob a licença [MIT](LICENSE).
 
 ---
 
-**Equipe E-Commerce Móveis & Pisos**
+**Equipe Lusacorps**
