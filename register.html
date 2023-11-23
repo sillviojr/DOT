@@ -5,6 +5,7 @@
     <meta charset="utf-8" />
     <title>●DOT</title>
     <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1" />
+    <script src="/assets/js/script.js"></script>
     <!-- Favicon -->
     <link rel="shortcut icon" href="assets/img/faicon.png" type="image/x-icon">
     <!-- Link BoxIcons -->
@@ -53,20 +54,38 @@
 
          <!-- INPUT LOGIN -->
     <div class="login-form container">
-        <h2>Login</h2>
+        <h2>Formulário de Registro</h2>
         <form>
-            <div class="form-group">
-                <label for="username">Email:</label>
-                <input type="text" id="username" name="username" placeholder="Digite seu Email">
-            </div>
-            <div class="form-group">
-                <label for="password">Senha:</label>
-                <input type="password" id="password" name="password" placeholder="Digite sua senha">
-                <div class="register-link">
-                    Não possui conta? <a href="/register.html">Registre-se</a>
-                </div>
-            </div>
-            <button type="submit" class="btn">Entrar</button>
+            <label for="nome">Nome:</label>
+            <input type="text" id="nome" name="nome" required>
+
+            <label for="sobrenome">Sobrenome:</label>
+            <input type="text" id="sobrenome" name="sobrenome" required>
+
+            <label for="dataNascimento">Data de Nascimento:</label>
+            <input type="date" id="dataNascimento" name="dataNascimento" required>
+
+            <label for="cpf">CPF:</label>
+            <input type="text" id="cpf" name="cpf" placeholder="123.456.789-00" required>
+
+            
+                <label for="cep">CEP:</label>
+                <input type="text" id="cep" name="cep" required>
+                <button type="button" onclick="buscarCEP()">Buscar CEP</button>
+                <br><br>
+                
+
+
+            <label for="endereco">Endereço:</label>
+            <input type="text" id="endereco" name="endereco" required>
+
+            <label for="bairro">Bairro:</label>
+            <input type="text" id="bairro" name="bairro" required>
+
+            <label for="cidade">Cidade:</label>
+            <input type="text" id="cidade" name="cidade" required>
+
+            <button type="submit">Registrar</button>
         </form>
     </div>
     <!-- INPUT LOGIN END -->

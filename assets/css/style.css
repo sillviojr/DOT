@@ -1,6 +1,10 @@
 /* font */
 @import url("https://fonts.googleapis.com/css2?family=Anton&family=Raleway:wght@300;400;500;600;700;800&family=Satisfy&display=swap");
 
+@media only screen and (max-width: 600px) {
+    /* Estilos para telas menores que 600px de largura */
+}
+
 :root {
     --header-height: 8rem;
 
@@ -758,3 +762,104 @@ ul {
         font-size: 160px;
     }
 }
+
+    .login-form {
+        width: 300px;
+        margin: var(--mb-2) auto;
+        padding: var(--mb-2);
+        background-color: var(--white-color);
+        border-radius: 8px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        text-align: center;
+    }
+
+    .login-form h2 {
+        margin-bottom: var(--mb-2);
+    }
+
+    .form-group {
+        margin-bottom: var(--mb-1);
+        text-align: left;
+    }
+
+    .form-group label {
+        display: block;
+        margin-bottom: 5px;
+    }
+
+    .form-group input {
+        width: 100%;
+        padding: var(--mb-1);
+        margin-bottom: var(--mb-1);
+        box-sizing: border-box;
+    }
+
+    .btn {
+        background-color: var(--primary-color);
+        color: var(--white-color);
+        padding: var(--mb-1);
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+    }
+
+
+    .nav__bar .logo, .footer__data1 .logo {
+        font-size: var(--h1-font-size);
+        color: var(--black-color);
+        text-align: center;
+    }
+    .nav__bar .logo span, .footer__data1 .logo span {
+        font-family: var(--font-title);
+        font-size: var(--big-font-size);
+        color: var(--primary-color);
+        text-align: center;
+    }
+
+    
+
+    /* PAG REGISTRO */ 
+
+    body {
+        font-family: 'Arial', sans-serif;
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    .container {
+        width: 80%;
+        margin: 0 auto;
+    }
+
+    form {
+        max-width: 600px;
+        margin: 0 auto;
+    }
+
+    label {
+        display: block;
+        margin-bottom: 8px;
+    }
+
+    input {
+        width: 100%;
+        padding: 10px;
+        margin-bottom: 15px;
+        box-sizing: border-box;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+    }
+
+    button {
+        background-color: #4CAF50;
+        color: white;
+        padding: 15px 20px;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+    }
+
+    button:hover {
+        background-color: #45a049;
+    }
