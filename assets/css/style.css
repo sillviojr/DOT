@@ -863,3 +863,20 @@ ul {
     button:hover {
         background-color: #45a049;
     }
+
+    /* Adicione isso ao seu arquivo CSS existente */
+.addToCartAnimation {
+    animation: addToCartAnimation 0.5s ease-in-out; /* Ajuste a duração da animação conforme necessário */
+}
+
+@keyframes addToCartAnimation {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.2);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
