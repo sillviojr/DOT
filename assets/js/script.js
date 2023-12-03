@@ -77,3 +77,5 @@ function calculateCeramic() {
 
   resultElement.textContent = "" + ceramicQuantity + " m²";
 }
+
+
