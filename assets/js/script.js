@@ -52,17 +52,20 @@ document.addEventListener("DOMContentLoaded", function () {
 // CALCULADORA
 
 function calculateCeramic() {
-  var ceramicLength = parseFloat(
+  var ceramicLengthCM = parseFloat(
     document.getElementById("ceramicLength").value
   );
-  var ceramicWidth = parseFloat(document.getElementById("ceramicWidth").value);
+  var ceramicWidthCM = parseFloat(
+    document.getElementById("ceramicWidth").value
+  );
   var areaLength = parseFloat(document.getElementById("areaLength").value);
   var areaWidth = parseFloat(document.getElementById("areaWidth").value);
+  var perdaInput = parseFloat(document.getElementById("perdaInput").value) || 0; // Valor padrão é 0 se não houver entrada
   var resultElement = document.getElementById("calcResult");
 
   if (
-    isNaN(ceramicLength) ||
-    isNaN(ceramicWidth) ||
+    isNaN(ceramicLengthCM) ||
+    isNaN(ceramicWidthCM) ||
     isNaN(areaLength) ||
     isNaN(areaWidth)
   ) {
@@ -70,12 +73,24 @@ function calculateCeramic() {
     return;
   }
 
+  // As dimensões da cerâmica estão em centímetros, não é necessário ajustar
+  var ceramicLength = ceramicLengthCM;
+  var ceramicWidth = ceramicWidthCM;
+
+  // Convertendo as dimensões da cerâmica para metros quadrados
   var ceramicSize = (ceramicLength / 100) * (ceramicWidth / 100);
-
   var areaTotal = areaLength * areaWidth;
-  var ceramicQuantity = (areaTotal / ceramicSize).toFixed(2); // Limita o resultado a 2 casas decimais
 
-  resultElement.textContent = "" + ceramicQuantity + " m²";
+  // Calcula a área com a perda especificada
+  var areaComPerda = areaTotal * (1 + perdaInput / 100);
+
+  console.log("ceramicLength:", ceramicLength);
+  console.log("ceramicWidth:", ceramicWidth);
+  console.log("ceramicSize:", ceramicSize);
+  console.log("areaTotal:", areaTotal);
+  console.log("areaComPerda:", areaComPerda);
+
+  var ceramicQuantity = areaComPerda / ceramicSize;
+
+  resultElement.textContent = ceramicQuantity.toFixed(2) + " m²";
 }
-
-
