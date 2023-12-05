@@ -43,7 +43,7 @@ const loadingContainer = document.querySelector("#loading");
 const countdownContainer = document.querySelector("#countdown");
 
 const eventDate = new Date(
-  "December 5 2023 00:00:00"
+  "December 6 2023 00:00:00"
 ); /**inserir a data do final do evento */
 
 const updateCountdown = () => {

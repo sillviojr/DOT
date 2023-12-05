@@ -4,6 +4,7 @@
 <head>
     <meta charset="utf-8" />
     <title>●DOT</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1" />
     <!-- Favicon -->
     <link rel="shortcut icon" href="assets/img/faicon.png" type="image/x-icon">
@@ -214,8 +215,7 @@
                         <a href="#" class="btn">adicionar ao carrinho</a>
                     </div>
                 </div>
-                <div class="swiper-button-next"></div>
-                <div class="swiper-button-prev"></div>
+              
             </div>
         </section>
         <!-- OFFER END -->
@@ -314,8 +314,7 @@
                         <a href="#" class="btn">adicionar ao carrinho</a>
                     </div>
                 </div>
-                <div class="swiper-button-next"></div>
-                <div class="swiper-button-prev"></div>
+                
             </div>
         </section>
         <!-- OFFER TWO END -->
@@ -610,9 +609,11 @@
     
     document.getElementById('politicaLink').addEventListener('click', function(e) {
       e.preventDefault();
+      document.body.style.overflow = 'hidden';
       document.getElementById('myModal').style.display = 'block';
     });
     document.getElementsByClassName('close')[0].addEventListener('click', function() {
+        document.body.style.overflow = '';
       document.getElementById('myModal').style.display = 'none';
     });
     window.onclick = function(event) {
@@ -623,31 +624,37 @@
     };
   </script>
 
-<script>
-    
+  <script>
     document.getElementById('sobreempresa').addEventListener('click', function(e) {
       e.preventDefault();
+      document.body.style.overflow = 'hidden';  // Desativa a rolagem
       document.getElementById('myModal2').style.display = 'block';
     });
+  
     document.getElementsByClassName('close2')[0].addEventListener('click', function() {
+      document.body.style.overflow = '';  // Ativa a rolagem novamente
       document.getElementById('myModal2').style.display = 'none';
     });
+  
     window.onclick = function(event) {
       var modal2 = document.getElementById('myModal2');
       if (event.target === modal2) {
-        modal.style.display = 'none';
+        modal2.style.display = 'none';
+        document.body.style.overflow = '';  // Ativa a rolagem novamente
       }
     };
-  </script>
+  </script>  
 
 <script>
     
     document.getElementById('politicadevo').addEventListener('click', function(e) {
       e.preventDefault();
+      document.body.style.overflow = 'hidden';
       document.getElementById('myModal3').style.display = 'block';
     });
     document.getElementsByClassName('close3')[0].addEventListener('click', function() {
-      document.getElementById('myModal3').style.display = 'none';
+    document.body.style.overflow = '';
+    document.getElementById('myModal3').style.display = 'none';
     });
     window.onclick = function(event) {
       var modal3 = document.getElementById('myModal3');
